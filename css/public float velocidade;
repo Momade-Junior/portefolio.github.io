@@ -1,0 +1,25 @@
+public float velocidade;
+
+	public float pulo;
+
+	void Movimentacao(){
+
+
+
+	
+		
+
+	}if (Input.GetAxisRaw ("Horizontal") > 0) {
+		transform.Translate (Vector2.right * velocidade * Time.deltaTime);
+	}
+	transform.eulerAngles = new Vector2 (0,0);
+
+	if (Input.GetAxisRaw ("Horizontal") < 0) {
+		transform.Translate (-Vector2.left * velocidade * Time.deltaTime);
+	
+	transform.eulerAngles = new Vector2 (0,0);}
+
+	if(Input.GetButtonDown("Jump"))
+	{
+		GetComponent<Rigidbody2D>().AddForce (transform.up * pulo);
+	}
